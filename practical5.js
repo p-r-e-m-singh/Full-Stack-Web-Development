@@ -23,15 +23,15 @@ function changeto30() {
 }
 
 function changetoitalic() {
-    para.style.font="italic";
+    para.style.fontStyle="italic";
 }
 
 function changetogeorgia() {
-    para.style.font= "georgia";
+    para.style.fontStyle= "Georgia";
 }
 
 function changetoariel() {
-    para.style.font= "ariel";
+    para.style.fontStyle= "Ariel";
 }
 
 options[0].addEventListener("click", changetored);
