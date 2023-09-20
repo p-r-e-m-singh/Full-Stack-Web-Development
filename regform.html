@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Regitration Form</h1>
+    <form name="Register" method="post" onsubmit="return verification()">
+        <p>User Id: <input id="uid" type="text"/></p>
+        <p>Password : <input id="pswd" type="password"/></p>
+        <p>Name : <input id="name" type="text"/></p>
+        <p>Address : <input id="address" type="textbox"/></p>
+        <p>Country : <select id="dropdown">
+            <option value = "default">Please select a Country</option>
+            <option value = "india">India</option>
+            <option value= "russia">Russia</option>
+            <option value = "US">USA</option>
+        </select></p>
+
+        <p>ZIP Code : <input id="zip" type="number"/></p>
+        <p>Email : <input id="mail" type="email"/></p>
+        <p>Sex : <input type="radio" name ="gender"/>Male <input type="radio" name ="gender"/>Female </p>
+        <p>Language : <input type="checkbox" name ="language"/>English <input type="checkbox" name ="language"/>Non-English </p>
+        <p>About: <input type="textArea" name="about" width="50px" height="30px"/></p>
+        <center><input type="submit"/></center>
+    </form>
+    <script src="regformjs.js"></script>
+</body>
+</html>
