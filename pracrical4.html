@@ -1,0 +1,31 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2-10 Table</title>
+    <script>
+        function printTable() {
+            var table = "";
+            for (var i = 2; i <= 10; i++) {
+                table += "<div class = 'indiv'><table>"
+                for(var j = 1 ; j <= 10 ; j++){
+                    table += "<tr><td>"+i+"</td><td> * </td><td>"+j+"</td><td>=</td><td>"+i*j+"</td></tr>";
+                }
+                table += "</div></table>"
+            }
+        
+            document.getElementById("tableContainer").innerHTML = table;
+            
+        }
+       
+    </script>
+    <style>
+        .indiv {
+            display: flex;
+        }
+    </style>
+</head>
+<body onload="printTable()">
+    <div id="tableContainer"></div>
+</body>
+</html>
