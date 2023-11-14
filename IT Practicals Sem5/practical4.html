@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <br>
+    <div id="output"></div>
+
+    <script>
+        let timerId;
+        let count = 1;
+
+        function start() {
+            timerId = setInterval(function() {
+                const output = document.getElementById("output");
+                const op = `<span>&nbsp;&nbsp;&nbsp;</span>${2*count}<span>&nbsp;&nbsp;&nbsp;</span>${3*count}<span>&nbsp;&nbsp;&nbsp;</span>${4*count}<span>&nbsp;&nbsp;&nbsp;</span>${5*count}<span>&nbsp;&nbsp;&nbsp;</span>${6*count}<span>&nbsp;&nbsp;&nbsp;</span>${7*count}<span>&nbsp;&nbsp;&nbsp;</span>${8*count}<span>&nbsp;&nbsp;&nbsp;</span>${9*count}<span>&nbsp;&nbsp;&nbsp;</span>${10*count}`;
+                const color = "hsl(" + (count * 360 / 10) + ", 100%, 50%)";
+                const fontSize = count * 2 + 10;
+                output.innerHTML += `<p style='color: ${color}; font-size: ${fontSize}px;'>${op}</p>`;
+                count++;
+                if (count > 10) {
+                    count = 1;
+                }
+            }, 5000);
+        }
+
+        function stop() {
+            clearInterval(timerId);
+        }
+    </script>
+</body>
+</html>
