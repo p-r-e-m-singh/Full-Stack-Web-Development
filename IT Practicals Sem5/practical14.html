@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #customerData {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Customer Information Form</h1>
+
+    <form id="customerForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+
+        <label for="foodPreferences">Food Preferences:</label>
+        <input type="text" id="foodPreferences" name="foodPreferences" required>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="customerData"></div>
+
+    <script>
+        function submitForm() {
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const age = document.getElementById('age').value;
+            const birthday = document.getElementById('birthday').value;
+            const foodPreferences = document.getElementById('foodPreferences').value;
+
+            // Create Customer object
+            const customer = {
+                firstName,
+                lastName,
+                age,
+                birthday,
+                foodPreferences
+            };
+
+            // Convert Customer object to JSON
+            const customerJSON = JSON.stringify(customer);
+
+            // Print objects on the console
+            console.log('JavaScript Customer Object:', customer);
+            console.log('Equivalent JSON Object:', customerJSON);
+
+            // Display customer data using AJAX
+            const customerDataDiv = document.getElementById('customerData');
+            customerDataDiv.innerHTML = ''; // Clear previous data
+
+            // Simulating data for two customers
+            const customer1 = {
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 30,
+                birthday: '1992-05-15',
+                foodPreferences: 'Vegetarian'
+            };
+
+            const customer2 = {
+                firstName: 'Jane',
+                lastName: 'Smith',
+                age: 25,
+                birthday: '1997-08-22',
+                foodPreferences: 'Vegan'
+            };
+
+            const customers = [customer1, customer2];
+
+            customers.forEach((customer, index) => {
+                const customerInfo = `<p><strong>Customer ${index + 1}:</strong><br>
+                                     First Name: ${customer.firstName}<br>
+                                     Last Name: ${customer.lastName}<br>
+                                     Age: ${customer.age}<br>
+                                     Birthday: ${customer.birthday}<br>
+                                     Food Preferences: ${customer.foodPreferences}</p>`;
+
+                customerDataDiv.innerHTML += customerInfo;
+            });
+        }
+    </script>
+
+</body>
+
+</html>
