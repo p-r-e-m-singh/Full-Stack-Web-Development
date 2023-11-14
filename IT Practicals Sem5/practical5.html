@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Grid</title>
+    <style>
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="styleTarget">This is the paragraph you can style.</p>
+    <div class="button-grid">
+        <button onclick="changeColor('red')">Red</button>
+        <button onclick="changeColor('green')">Green</button>
+        <button onclick="changeColor('blue')">Blue</button>
+        <button onclick="changeSize('10px')">10</button>
+        <button onclick="changeSize('20px')">20</button>
+        <button onclick="changeSize('30px')">30</button>
+        <button onclick="changeFont('Arial')">Arial</button>
+        <button onclick="changeFont('Times New Roman')">Times New Roman</button>
+        <button onclick="changeFont('Courier New')">Courier New</button>
+    </div>
+
+
+    <script>
+        function changeColor(color) {
+            document.getElementById('styleTarget').style.color = color;
+        }
+
+        function changeSize(size) {
+            document.getElementById('styleTarget').style.fontSize = size;
+        }
+
+        function changeFont(font) {
+            document.getElementById('styleTarget').style.fontFamily = font;
+        }
+    </script>
+</body>
+</html>
