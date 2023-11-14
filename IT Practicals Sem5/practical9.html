@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Sc. Hons CS Course</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>B.Sc. Hons Computer Science Course</h1>
+
+    <section>
+        <h2>Fee</h2>
+        <p>The annual fee for the B.Sc. Hons CS course is 56000 INR.</p>
+    </section>
+
+    <section>
+        <h2>Eligibility Criteria</h2>
+        <p>Students must have completed their 10+2 education with a minimum of 60% marks in the science stream.</p>
+    </section>
+
+    <section>
+        <h2>Papers with Names and Credits</h2>
+        <ul>
+            <li>Introduction to Programming Language (4 credits)</li>
+            <li>Data Structures and Algorithms (5 credits)</li>
+            <li>Database Management Systems (4 credits)</li>
+            <li>Software Engineering (4 credits)</li>
+            <li>Artificial Intelligence (5 credits)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Future Possibilities</h2>
+        <p>Graduates of the B.Sc. Hons CS course have various career opportunities, including software development, data analysis, system architecture, and more. Additionally, they can pursue higher education such as M.Sc. or PhD in Computer Science.</p>
+    </section>
+
+    <button id="styleButton">Style Page</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to redesign the page
+            function redesignPage() {
+                $('body').css({
+                    'background-color': '#f4f4f4',
+                    'color': '#333',
+                    'text-align': 'center',
+                    'padding': '50px'
+                });
+
+                $('h1').css({
+                    'color': '#007bff'
+                });
+
+                $('section').css({
+                    'background-color': '#fff',
+                    'border': '1px solid #ddd',
+                    'padding': '20px',
+                    'margin-bottom': '20px',
+                    'border-radius': '5px',
+                    'box-shadow': '0 0 10px rgba(0, 0, 0, 0.1)'
+                });
+
+                $('button').css({
+                    'background-color': '#007bff',
+                    'color': '#fff',
+                    'border': 'none',
+                    'cursor': 'pointer',
+                    'margin-top': '20px'
+                });
+            }
+
+            // Attach click event to the button
+            $('#styleButton').click(function () {
+                redesignPage();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
