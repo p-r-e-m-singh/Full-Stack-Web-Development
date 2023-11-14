@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #result {
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Math Operation</h1>
+
+    <label for="mathExpression">Math Expression:</label>
+    <input type="text" id="mathExpression" placeholder="Enter a mathematical expression">
+
+    <br>
+
+    <input type="radio" name="operation" value="square" id="squareRadio">
+    <label for="squareRadio">Square</label>
+
+    <input type="radio" name="operation" value="double" id="doubleRadio">
+    <label for="doubleRadio">Double</label>
+
+    <br>
+
+    <label for="result">Result:</label>
+    <input type="text" id="result" readonly>
+
+    <br>
+
+    <button onclick="performOperation()">Calculate</button>
+
+    <script>
+        function performOperation() {
+            const mathExpression = document.getElementById('mathExpression').value;
+            const squareRadio = document.getElementById('squareRadio');
+            const doubleRadio = document.getElementById('doubleRadio');
+            const resultField = document.getElementById('result');
+
+            if (!mathExpression) {
+                alert('Please enter a mathematical expression.');
+                return;
+            }
+
+            if (!squareRadio.checked && !doubleRadio.checked) {
+                alert('Please select an operation (Square or Double).');
+                return;
+            }
+
+            let result;
+            if (squareRadio.checked) {
+                result = Math.pow(eval(mathExpression), 2); 
+            } else {
+                result = eval(mathExpression) * 2;
+            }
+
+            resultField.value = result;
+        }
+    </script>
+
+</body>
+
+</html>
