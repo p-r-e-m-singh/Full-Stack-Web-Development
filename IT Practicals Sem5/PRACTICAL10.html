@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Image Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="text-center">Bootstrap Image Gallery</h1>
+
+    <div class="container-fluid gallery-container">
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+        </div>
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 2">
+        </div>
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 3">
+        </div>
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 4">
+        </div>
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 5">
+        </div>
+        <div class="gallery-item col-lg-3 col-md-4 col-sm-6">
+            <img src="https://via.placeholder.com/300" alt="Image 6">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
